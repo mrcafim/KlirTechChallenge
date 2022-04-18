@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +17,6 @@ namespace KlirTechChallenge.Web.Api
 {
     public class Startup
     {
-        readonly string AllowSpecificOrigins = "_allowSpecificOrigins";
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -35,14 +34,30 @@ namespace KlirTechChallenge.Web.Api
 
             services.AddCors(options =>
             {
-                options.AddPolicy(name: AllowSpecificOrigins,
-                                  builder =>
-                                  {
-                                      builder.WithOrigins("http://localhost:4200");
-                                  });
+                options.AddPolicy("CorsPolicy", builder => builder
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .SetIsOriginAllowed(_ => true)
+                        .AllowCredentials());
             });
 
             services.AddControllers();
+
+            services.AddSwaggerGen(s =>
+            {
+                s.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Klir Ecommerce API",
+                    Description = "Klir Ecommerce Swagger surface",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Klir Ecommerce",
+                        Email = "dev@klirecommerce.com",
+                        Url = new Uri("https://klirecommerce.com")
+                    }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,13 +70,19 @@ namespace KlirTechChallenge.Web.Api
 
             app.UseRouting();
 
-            app.UseCors(AllowSpecificOrigins);
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(x =>
+            {
+                x.SwaggerEndpoint("/swagger/v1/swagger.json", "Klir API v1.0");
             });
         }
     }
