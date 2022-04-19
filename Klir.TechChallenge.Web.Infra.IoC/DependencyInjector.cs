@@ -44,8 +44,10 @@ namespace Klir.TechChallenge.Web.Infra.IoC
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<DataContext>();
         }
+
         private static void RegisterModules(IServiceCollection services)
         {
+            ProductDependencyInjector.Register(services);
             UserDependencyInjector.Register(services);
         }
     }
