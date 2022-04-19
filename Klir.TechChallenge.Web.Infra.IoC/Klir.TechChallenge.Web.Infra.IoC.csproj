@@ -4,4 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Klir.TechChallenge.Web.Domain.Core\Klir.TechChallenge.Web.Domain.Core.csproj" />
+    <ProjectReference Include="..\Klir.TechChallenge.Web.Infra.Bus\Klir.TechChallenge.Web.Infra.Bus.csproj" />
+    <ProjectReference Include="..\Klir.TechChallenge.Web.Infra.Data\Klir.TechChallenge.Web.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>

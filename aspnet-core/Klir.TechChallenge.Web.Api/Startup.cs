@@ -1,4 +1,5 @@
 using Klir.TechChallenge.Web.Infra.Data.Context;
+using Klir.TechChallenge.Web.Infra.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
+using MediatR;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -27,6 +29,8 @@ namespace KlirTechChallenge.Web.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            DependencyInjector.Register(services);
+
             services.AddDbContext<DataContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("Data"));
@@ -58,6 +62,10 @@ namespace KlirTechChallenge.Web.Api
                     }
                 });
             });
+
+            services.AddMediatR(typeof(Startup));
+
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
