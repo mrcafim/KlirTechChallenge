@@ -17,7 +17,8 @@ namespace Klir.TechChallenge.Web.Domain.Cart.Commands.Handlers
 
     public class CartCommandHandler : CommandHandler,
         IRequestHandler<AddCartCommand, CommandResult>,
-        IRequestHandler<UpdateCartCommand, CommandResult>
+        IRequestHandler<UpdateCartCommand, CommandResult>,
+        IRequestHandler<CalculateCartCommand, CommandResult>
     {
         private readonly ICartRepository _cartRepository;
         private readonly IUserRepository _userRepository;
@@ -112,6 +113,45 @@ namespace Klir.TechChallenge.Web.Domain.Cart.Commands.Handlers
                 _cartRepository.Update(cart);
 
                 return Task.FromResult(new CommandResult(Commit()));
+            }
+            catch (Exception e)
+            {
+                RaiseDomainNotification(command.MessageType, e.Message);
+                return Task.FromResult(new CommandResult(false));
+            }
+        }
+
+        public Task<CommandResult> Handle(CalculateCartCommand command, CancellationToken cancellationToken)
+        {
+            try
+            {
+                if (!ValidateCommand(command))
+                    return Task.FromResult(new CommandResult(false));
+
+
+                var cart = _cartRepository.GetById(command.Id);
+
+                if (cart == null)
+                {
+                    cart = new Entities.Cart();
+                    cart.Id = command.Id;
+                    foreach (var item in command.Items)
+                    {
+                        cart.AddItem(item.ProductId, item.Quantity);
+                    }
+                    _cartRepository.Add(cart);
+                }
+                else
+                {
+                    cart.ClearCart();
+                    foreach (var item in command.Items)
+                    {
+                        cart.AddItem(item.ProductId, item.Quantity);
+                    }
+                    _cartRepository.Update(cart);
+                }
+
+                return Task.FromResult(new CommandResult(InTransaction || Commit()));
             }
             catch (Exception e)
             {

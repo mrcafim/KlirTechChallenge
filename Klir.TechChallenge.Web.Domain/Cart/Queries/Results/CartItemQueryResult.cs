@@ -16,6 +16,21 @@ namespace Klir.TechChallenge.Web.Domain.Cart.Queries.Results
         public string PromotionName { get; set; }
         public int PromotionMinimumQuantity { get; set; }
         public decimal PromotionDiscount { get; set; }
-
+        
+        public void CalculateDiscount(decimal discount, int minimumQuantity)
+        {
+            if (discount <= 0)
+            {
+                Total = Price * Quantity;
+            }
+            else
+            {
+                for (int i = 0; i < this.Quantity; i = i + minimumQuantity)
+                {
+                    Discount += discount;
+                }
+                Total = (Price * Quantity) - Discount;
+            }
+        }
     }
 }

@@ -47,5 +47,13 @@ namespace Klir.TechChallenge.Web.Api.Controllers
             Bus.SendCommand(command);
             return Response();
         }
+
+        [HttpPut]
+        [Route("calculate")]
+        public Task<IActionResult> CalculateCart([FromBody] CalculateCartCommand command)
+        {
+            Bus.SendCommand(command);
+            return Response();
+        }
     }
 }

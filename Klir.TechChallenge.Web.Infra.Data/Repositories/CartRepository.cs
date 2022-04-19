@@ -70,6 +70,11 @@ namespace Klir.TechChallenge.Web.Infra.Data.Repositories
                 })
                 .FirstOrDefault(x => x.Id == id);
 
+            foreach (var item in cart.Items)
+            {
+                item.CalculateDiscount(item.PromotionDiscount, item.PromotionMinimumQuantity);
+            }
+
             cart.SetTotal();
 
             return cart;

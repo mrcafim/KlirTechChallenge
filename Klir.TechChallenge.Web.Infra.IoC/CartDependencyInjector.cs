@@ -18,6 +18,7 @@ namespace Klir.TechChallenge.Web.Infra.IoC
             // Commands
             services.AddScoped<IRequestHandler<AddCartCommand, CommandResult>, CartCommandHandler>();
             services.AddScoped<IRequestHandler<UpdateCartCommand, CommandResult>, CartCommandHandler>();
+            services.AddScoped<IRequestHandler<CalculateCartCommand, CommandResult>, CartCommandHandler>();
 
             // Repositories
             services.AddScoped<ICartRepository, CartRepository>();
