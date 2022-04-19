@@ -31,7 +31,7 @@ namespace Klir.TechChallenge.Web.Domain.User.Entities
         public DateTime CreatedAt { get; private set; }
         public DateTime UpdatedAt { get; private set; }
         public Guid? CartId { get; protected set; }
-        public virtual Cart.Entitities.Cart Cart { get; protected set; }
+        public virtual Cart.Entities.Cart Cart { get; protected set; }
 
         public void Deactivate()
         {

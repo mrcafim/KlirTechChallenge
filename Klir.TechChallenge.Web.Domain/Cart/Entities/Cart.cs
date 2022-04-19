@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Klir.TechChallenge.Web.Domain.Cart.Entitities
+namespace Klir.TechChallenge.Web.Domain.Cart.Entities
 {
     public class Cart : Entity
     {

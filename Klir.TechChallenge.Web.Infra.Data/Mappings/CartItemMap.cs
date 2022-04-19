@@ -1,4 +1,4 @@
-﻿using Klir.TechChallenge.Web.Domain.Cart.Entitities;
+﻿using Klir.TechChallenge.Web.Domain.Cart.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

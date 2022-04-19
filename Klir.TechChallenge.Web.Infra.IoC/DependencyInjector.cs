@@ -47,6 +47,7 @@ namespace Klir.TechChallenge.Web.Infra.IoC
 
         private static void RegisterModules(IServiceCollection services)
         {
+            CartDependencyInjector.Register(services);
             ProductDependencyInjector.Register(services);
             UserDependencyInjector.Register(services);
         }

@@ -1,4 +1,4 @@
-﻿using Klir.TechChallenge.Web.Domain.Cart.Entitities;
+﻿using Klir.TechChallenge.Web.Domain.Cart.Entities;
 using Klir.TechChallenge.Web.Domain.Product.Entities;
 using Klir.TechChallenge.Web.Domain.User.Entities;
 using Klir.TechChallenge.Web.Infra.Data.Mappings;
