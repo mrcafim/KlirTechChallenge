@@ -1,7 +1,5 @@
 ﻿using Klir.TechChallenge.Web.Domain.Cart.Queries.Results;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Klir.TechChallenge.Web.Domain.Cart.Repositories
 {

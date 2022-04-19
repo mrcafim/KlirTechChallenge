@@ -5,9 +5,6 @@ using Klir.TechChallenge.Web.Domain.Core.Commands;
 using Klir.TechChallenge.Web.Infra.Data.Repositories;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Klir.TechChallenge.Web.Infra.IoC
 {

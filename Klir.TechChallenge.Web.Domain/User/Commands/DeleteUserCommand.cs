@@ -1,8 +1,6 @@
 ﻿using Klir.TechChallenge.Web.Domain.Core.Commands;
 using Klir.TechChallenge.Web.Domain.User.Validations;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Klir.TechChallenge.Web.Domain.User.Commands
 {

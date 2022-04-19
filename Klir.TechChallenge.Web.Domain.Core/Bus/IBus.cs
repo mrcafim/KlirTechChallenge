@@ -1,8 +1,5 @@
 ﻿using Klir.TechChallenge.Web.Domain.Core.Commands;
 using Klir.TechChallenge.Web.Domain.Core.Events;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Klir.TechChallenge.Web.Domain.Core.Bus

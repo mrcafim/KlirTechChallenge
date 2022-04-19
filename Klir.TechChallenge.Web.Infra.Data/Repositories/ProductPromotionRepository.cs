@@ -2,9 +2,7 @@
 using Klir.TechChallenge.Web.Domain.Product.Repositories;
 using Klir.TechChallenge.Web.Infra.Data.Context;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Klir.TechChallenge.Web.Infra.Data.Repositories
 {

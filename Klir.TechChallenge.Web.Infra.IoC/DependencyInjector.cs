@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Klir.TechChallenge.Web.Domain.Core.Bus;
+﻿using Klir.TechChallenge.Web.Domain.Core.Bus;
 using Klir.TechChallenge.Web.Domain.Core.Notifications;
 using Klir.TechChallenge.Web.Domain.Core.Transactions;
 using Klir.TechChallenge.Web.Infra.Bus;

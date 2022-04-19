@@ -1,9 +1,6 @@
 ﻿using Klir.TechChallenge.Web.Domain.Cart.Entities;
 using Klir.TechChallenge.Web.Domain.Cart.Repositories;
 using Klir.TechChallenge.Web.Infra.Data.Context;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Klir.TechChallenge.Web.Infra.Data.Repositories
 {

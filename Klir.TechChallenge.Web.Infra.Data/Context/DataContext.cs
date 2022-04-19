@@ -3,9 +3,6 @@ using Klir.TechChallenge.Web.Domain.Product.Entities;
 using Klir.TechChallenge.Web.Domain.User.Entities;
 using Klir.TechChallenge.Web.Infra.Data.Mappings;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Klir.TechChallenge.Web.Infra.Data.Context
 {

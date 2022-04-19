@@ -1,7 +1,4 @@
 ﻿using Klir.TechChallenge.Web.Domain.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Klir.TechChallenge.Web.Domain.Product.Entities
 {

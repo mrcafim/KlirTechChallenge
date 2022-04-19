@@ -5,8 +5,6 @@ using Klir.TechChallenge.Web.Domain.Core.Transactions;
 using Klir.TechChallenge.Web.Domain.User.Repositories;
 using MediatR;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 

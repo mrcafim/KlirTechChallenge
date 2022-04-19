@@ -1,8 +1,6 @@
 ﻿using Klir.TechChallenge.Web.Domain.Core.Entities;
 using Klir.TechChallenge.Web.Domain.User.Enums;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Klir.TechChallenge.Web.Domain.User.Entities
 {

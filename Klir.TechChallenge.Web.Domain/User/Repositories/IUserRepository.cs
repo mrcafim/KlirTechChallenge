@@ -1,7 +1,6 @@
 ﻿using Klir.TechChallenge.Web.Domain.User.Queries.Results;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Klir.TechChallenge.Web.Domain.User.Repositories
 {
