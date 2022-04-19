@@ -1,0 +1,21 @@
+html {
+    --main-color: #1747A3;
+}
+
+body {
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    color: #6D6D6D;
+    background-color: #fff;
+}
+
+footer {
+    border-top: 1px solid #dee2e6!important;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, .05);   
+    position: absolute;
+    padding: .75em 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}

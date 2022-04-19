@@ -10,14 +10,18 @@ import { CounterComponent } from './components/counter/counter.component';
 import { FetchDataComponent } from './components/fetch-data/fetch-data.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavMenuComponent } from './components/app/nav-menu/nav-menu.component';
+import { FooterComponent } from './components/app/footer/footer.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
     FetchDataComponent,
+    FooterComponent,
     HomeComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
