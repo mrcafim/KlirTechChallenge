@@ -144,7 +144,7 @@
     "universal-analytics" "^0.4.20"
     "uuid" "^3.3.2"
 
-"@angular/common@8.2.12":
+"@angular/common@>=5.0.0", "@angular/common@8.2.12":
   "integrity" "sha512-BNz1lo+PP+lwIX3sErRGBRnkMzT5yT8CJ5o/M29AanCdcx9dpoJG2WKgpIgw8UBcj9QlP0CkSmzPtUNtcNMthA=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-8.2.12.tgz"
   "version" "8.2.12"
@@ -174,7 +174,7 @@
   dependencies:
     "tslib" "^1.9.0"
 
-"@angular/core@>=2.3.1 <10.0.0 || >9.0.0-beta <10.0.0 || >9.1.0-beta <10.0.0 || >9.2.0-beta <10.0.0", "@angular/core@8.2.12":
+"@angular/core@>=2.3.1 <10.0.0 || >9.0.0-beta <10.0.0 || >9.1.0-beta <10.0.0 || >9.2.0-beta <10.0.0", "@angular/core@>=5.0.0", "@angular/core@8.2.12":
   "integrity" "sha512-wEFwhHCuuXynXAMeA1G+0KIYY0jqXYs7I8p+GO+ufKoUmzWHFTvtMJ6nvKgy+LmZTByO2gf9oVAAlRodNb8ttQ=="
   "resolved" "https://registry.npmjs.org/@angular/core/-/core-8.2.12.tgz"
   "version" "8.2.12"
@@ -5429,6 +5429,11 @@
   "integrity" "sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw=="
   "resolved" "https://registry.npmjs.org/neo-async/-/neo-async-2.6.1.tgz"
   "version" "2.6.1"
+
+"ngx-pagination@^5.1.1":
+  "integrity" "sha512-KxHES+Dn6pbetytO9ng2GAdclmo4UcwzFmQyVPWh2xRPbAlv5/ezL2xnDVBFMqCoJQaZagvdQ+ZZFbqGWqAvCQ=="
+  "resolved" "https://registry.npmjs.org/ngx-pagination/-/ngx-pagination-5.1.1.tgz"
+  "version" "5.1.1"
 
 "nice-try@^1.0.4":
   "integrity" "sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ=="

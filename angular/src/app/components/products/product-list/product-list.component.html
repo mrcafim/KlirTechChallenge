@@ -1,0 +1,46 @@
+<div class="list-title">
+    <h2>
+        Product List
+    </h2>
+</div>
+
+<div *ngIf="productsList.length > 0; then hasProducts else noProducts"></div>
+<ng-template #noProducts>
+    <div class="novos">
+        <p>No products were found.</p>
+    </div>
+</ng-template>
+
+<ng-template #hasProducts>
+    <div class="lista">
+        <table class="table table-striped table-hover table-bordered">
+            <thead class="text-center">
+                <tr>
+                    <th class="col-md-3">Name</th>
+                    <th class="col-md-4">Description</th>
+                    <th class="col-md-2">Price</th>
+                    <th class="col-md-2">Promotion</th>
+                    <th class="col-md-1">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of productsList | paginate: { itemsPerPage: 10, currentPage: pagination }" class="pointer">
+                    <td>{{product.name}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{ product.price | currency:'USD' }}</td>
+                    <td>
+                        <div *ngIf="product.promotion">
+                            <span>{{product.promotion.description}}</span>
+                        </div>
+                    </td>
+                    <td (click)="productDetail(product.id)"><a class="pointer text-blue d-flex justify-content-center">Details</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-center">
+            <pagination-controls class="my-pagination" (pageChange)="pagination = $event" previousLabel="Previous"
+                nextLabel="Next">
+            </pagination-controls>
+        </div>
+    </div>
+</ng-template>

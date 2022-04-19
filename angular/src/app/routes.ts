@@ -9,5 +9,6 @@ export const appRoutes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'counter', component: CounterComponent },
     { path: 'fetch-data', component: FetchDataComponent },
+    { path: 'products', loadChildren: './components/products/products.module#ProductsModule'},
     { path: '**', component: NotFoundComponent},
 ];

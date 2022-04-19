@@ -12,6 +12,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NavMenuComponent } from './components/app/nav-menu/nav-menu.component';
 import { FooterComponent } from './components/app/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ShareModule } from './components/shared/share.module';
+import { ServiceModule } from './services/services.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules}),
+    ShareModule,
+    ServiceModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
