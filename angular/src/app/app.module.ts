@@ -14,6 +14,7 @@ import { FooterComponent } from './components/app/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ShareModule } from './components/shared/share.module';
 import { ServiceModule } from './services/services.module';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ServiceModule } from './services/services.module';
     FooterComponent,
     HomeComponent,
     NavMenuComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
